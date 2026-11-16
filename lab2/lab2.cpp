@@ -14,9 +14,10 @@ class LineDrawingAlgorithms{
 };
 void LineDrawingAlgorithms::DDA(int x,int y){
     float a=0.0,b=0.0;
-    int steps=max(x,y);
-    float sx = (float)x/steps;
-    float sy = (float)y/steps;
+    float dx=x-a;dy=x-b;
+    int steps=max(dx,dy);
+    float sx = (float)dx/steps;
+    float sy = (float)dy/steps;
     for (int i = 0; i < steps; i++) {
         putpixel(round(a),round(b),BLUE);
         a+=sx;b+=sy;
