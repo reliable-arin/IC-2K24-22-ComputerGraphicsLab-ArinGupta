@@ -14,7 +14,7 @@ class LineDrawingAlgorithms{
 };
 void LineDrawingAlgorithms::DDA(int x,int y){
     float a=0.0,b=0.0;
-    float dx=x-a;dy=x-b;
+    float dx=x-a,dy=y-b;
     int steps=max(dx,dy);
     float sx = (float)dx/steps;
     float sy = (float)dy/steps;
